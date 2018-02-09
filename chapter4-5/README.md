@@ -27,6 +27,15 @@ Spring MVC常用以下几个注解：
     @RestController是一个组合注解，组合了@Controller和@ResponseBody，这就意味着当只开发一个和页面交互数据控制的时候，需要
  此注解。若没有此注解，要想实现上述功能，则需要自己在代码中加@Controller和@ResponseBody两个注解。
     
+**Spring MVC logbock日志配置**
+
+新建一个logback.xml，放到resources路径下。其中“com.springapp.mvc”需要换成你自己的java文件所在的包路径。
+
+后面的level是日志显示等级，DEBUG等级最低，可以显示所有level的日志，WARN等级居中，可以显示WARN及其以上level的日志，ERROR等级最高，只能显示ERROR这个level的日志。所以一般用DEBUG就行。
+
+　　level等级顺序：error>warn>info>debug。
+
+
 =============================================================================
 **静态资源映射**
 程序的静态文件（js、css、图片）等需要直接访问这时可以配置重写addResourceHandlers方法来实现。
@@ -54,3 +63,13 @@ Spring MVC常用以下几个注解：
 **Spring MVC的高级配置**
 
 Spring控制器中，通过MultipartFile file来接收文件，通过MultipartFile[] file接收多个文件上传。
+
+**自定义HttpMessageConverter**
+
+HttpMessageConverter是用来处理request和response里的数据的。Spring为我们内置了大量的HttpMessageConverter
+例如：MappingJackjson2HttpMessageConverter、StringHttpMessageConverter等。
+
+    配置自定义HttpMessageConverter的Bean，在Spring MVC里注册HttpMessageConverter有两个方法：
+    ●configureMessageConverters：重载会覆盖掉Spring MVC默认注册的多个HttpMessageConverter。
+    
+    ●extendMessageConverters:仅添加一个自定义的HttpMessageConverter，不覆盖默注册的HttpMessageConverter。
