@@ -35,7 +35,7 @@ Spring MVC常用以下几个注解：
 
 　　level等级顺序：error>warn>info>debug。
 
-![Image 日志]（Spring-MVC-leraning/chapter4-5/img-folder/logback.jpg）
+![日志文件]（https://github.com/lwx57280/Spring-MVC-leraning/blob/master/chapter4-5/img-folder/logback.jpg）
 =============================================================================
 **静态资源映射**
 程序的静态文件（js、css、图片）等需要直接访问这时可以配置重写addResourceHandlers方法来实现。
