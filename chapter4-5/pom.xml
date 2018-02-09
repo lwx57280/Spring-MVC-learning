@@ -123,7 +123,7 @@
   </dependencies>
   <build>
     <!--后缀跟上时间戳,这个需要在<finalName>节点下使用maven的内置变量maven.build.timestamp，会生成带时间戳的war包-->
-    <finalName>chapter4.5</finalName>
+    <!--<finalName>chapter4.5</finalName>-->
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

@@ -72,4 +72,8 @@ HttpMessageConverter是用来处理request和response里的数据的。Spring为
     配置自定义HttpMessageConverter的Bean，在Spring MVC里注册HttpMessageConverter有两个方法：
     ●configureMessageConverters：重载会覆盖掉Spring MVC默认注册的多个HttpMessageConverter。
     
+
     ●extendMessageConverters:仅添加一个自定义的HttpMessageConverter，不覆盖默注册的HttpMessageConverter。
+
+    ●extendMessageConverters:仅添加一个自定义的HttpMessageConverter，不覆盖默注册的HttpMessageConverter。
+

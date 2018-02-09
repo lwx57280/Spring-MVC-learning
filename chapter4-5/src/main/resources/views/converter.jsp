@@ -20,7 +20,7 @@
     <script type="text/javascript">
         function req() {
             $.ajax({
-                url:"converter",
+                url:"convert",
                 data:"1-wangyunfei",        //1、注意这里的格式，后台处理按此格式，用“-”隔开。
                 type:"POST",
                 contentType:"application/x-wisely",     //2、contentType设置的媒体类型是自定义的application/x-wisely
