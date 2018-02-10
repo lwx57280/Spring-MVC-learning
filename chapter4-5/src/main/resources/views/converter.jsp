@@ -27,7 +27,7 @@
                 success:function (data) {
                     $("#resp").html(data);
                 }
-            })
+            });
         }
     </script>
 </body>

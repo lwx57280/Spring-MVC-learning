@@ -21,7 +21,7 @@ public class MyMessageConverter extends AbstractHttpMessageConverter<DemoObj> {
 
     public MyMessageConverter() {
         //2、新建一个自定义的媒体类型application/x-wisely。
-        super(new MediaType("application","/x-wisely", Charset.forName("UTF-8")));
+        super(new MediaType("application","x-wisely", Charset.forName("UTF-8")));
 
     }
 

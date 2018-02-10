@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.*;
@@ -15,7 +16,8 @@ import org.springframework.web.servlet.view.JstlView;
 import java.util.List;
 
 @Configuration
-@EnableWebMvc   //1、@EnableWebMvc注解，开启对SpringMVC的配置支持
+@EnableWebMvc       //1、@EnableWebMvc注解，开启对SpringMVC的配置支持
+@EnableScheduling   //通过@EnableScheduling注解开启对计划任务的支持
 @ComponentScan("com.wisely")
 public class MyMvcConfig extends WebMvcConfigurerAdapter {  //2、继承WebMvcConfigurerAdapter类，重写其方法可对Spring MVC进行配置
     @Bean
@@ -53,8 +55,8 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {  //2、继承WebMvcCo
         registry.addViewController("/toUpload").setViewName("/upload");
         registry.addViewController("/converter").setViewName("/converter");
         // 添加转向sse.jsp页面映射
-        //registry.addViewController("/sse").setViewName("/sse");
-        //registry.addViewController("/async").setViewName("/async");
+        registry.addViewController("/sse").setViewName("/sse");
+        registry.addViewController("/async").setViewName("/async");
     }
 
     /**
@@ -87,7 +89,6 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {  //2、继承WebMvcCo
      */
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-
         converters.add(converter());
     }
 

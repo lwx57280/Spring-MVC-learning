@@ -2,16 +2,15 @@ package com.wisely.web.ch4_5;
 
 
 import com.wisely.domain.DemoObj;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 测试控制器
  */
-@Configuration
+@Controller
 public class ConverterController {
 
     /**
@@ -22,7 +21,7 @@ public class ConverterController {
      */
     @RequestMapping(value = "/convert", produces = {"application/x-wisely"})
     public @ResponseBody DemoObj convert(@RequestBody DemoObj obj) {
-        System.out.println("obj=" + obj.getId() + "|" + obj.getName());
+        System.out.println("obj===========" + obj.getId() + "|" + obj.getName());
         return obj;
     }
 

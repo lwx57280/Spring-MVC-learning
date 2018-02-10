@@ -14,8 +14,6 @@
     -->
 </head>
 <body>
-    <div id="resp"></div>
-    <input type="button" onclick="req();" value="请求"/>
     <script src="../assets/js/jquery-1.9.1.js" type="text/javascript"></script>
     <script type="text/javascript">
         deferred();     //1、页面打开向后台发送请求

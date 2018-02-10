@@ -77,3 +77,7 @@ HttpMessageConverter是用来处理request和response里的数据的。Spring为
 
     ●extendMessageConverters:仅添加一个自定义的HttpMessageConverter，不覆盖默注册的HttpMessageConverter。
 
+**服务端消息推送技术**
+
+服务推送方案都是基于：当客户端向服务端发送请求，服务端会抓住这个请求不放，等有数据库更新的时候才返回给客户端，当客户端
+接收到消息后，再向服务端发送请求，周而复始。这种方式的好处是减少了服务器的请求数量，大大减少了服务器的压力。

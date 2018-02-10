@@ -17,6 +17,7 @@
     <div id="msgFromPush"></div>
     <script src="../assets/js/jquery-1.9.1.js" type="text/javascript"></script>
     <script type="text/javascript">
+        //1、EventSource对象只有新式浏览器才有(Chrome、Firefox)等，EventSource是SSE的客户端。
         if(!!window.EventSource){
             var source = new EventSource("push");
             var s='';
