@@ -81,3 +81,25 @@ HttpMessageConverter是用来处理request和response里的数据的。Spring为
 
 服务推送方案都是基于：当客户端向服务端发送请求，服务端会抓住这个请求不放，等有数据库更新的时候才返回给客户端，当客户端
 接收到消息后，再向服务端发送请求，周而复始。这种方式的好处是减少了服务器的请求数量，大大减少了服务器的压力。
+
+@EnableScheduling 注解对应的内容如下：
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Import({SchedulingConfiguration.class})
+@Documented
+public @interface EnableScheduling {
+}
+由上可以看到实际上是SchedulingConfiguration.class 类实现了Spring 的任务调度框架级功能。
+该配置类仅仅是定义了ScheduledAnnotationBeanPostProcessor 的实例。Spring 的调度功能由该实例进行配置。
+
+ScheduledAnnotationBeanPostProcessor
+该类实现的接口如下所示：
+
+
+
+
+**Spring MVC的测试**
+1、@WebAppConfiguration注解在类上，用来声明加载的ApplicationContext是一个WebApplicationContext。它的
+属性指定的是Web资源位置,默认为src/main/webapp
+
