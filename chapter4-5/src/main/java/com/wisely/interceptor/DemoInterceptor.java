@@ -41,5 +41,4 @@ public class DemoInterceptor extends HandlerInterceptorAdapter {
         System.out.println("本次请求处理时间为:"+new Long(endTime-startTime)+"ms");
         request.setAttribute("handlingTime",endTime-startTime);
     }
-
 }
