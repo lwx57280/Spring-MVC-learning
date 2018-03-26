@@ -29,6 +29,7 @@ public class ExceptionHandlerAdvice {
         modelAndView.addObject("errorMassage",exception.getMessage());
         return modelAndView;
     }
+    
     /**
      * 3、此处使用@ModelAttribute注解将键值对添加到全局，所有注解@RequestMapping的方法可获得此键值对。
      * @param model
