@@ -10,7 +10,7 @@ import java.lang.annotation.*;
  */
 @Documented     // 用于JavaDoc
 @Target(ElementType.TYPE)   //作用于类上
-@Retention(RetentionPolicy.RUNTIME) // 限制Annotatiaon的生命周期
+@Retention(RetentionPolicy.RUNTIME) // 限制Annotation的生命周期
 public @interface Controller {
 
     /**
