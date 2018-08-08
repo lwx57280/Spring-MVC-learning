@@ -21,6 +21,6 @@ public class UserServiceImpl implements UserService {
 
         System.out.println("UserServiceImpl.insert() start ");
         userDao.insert();
-        System.out.println("UserServiceImpl.insert() enc ");
+        System.out.println("UserServiceImpl.insert() end ");
     }
 }
