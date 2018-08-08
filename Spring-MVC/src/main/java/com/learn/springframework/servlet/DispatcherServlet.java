@@ -2,7 +2,6 @@ package com.learn.springframework.servlet;
 
 import com.learn.springframework.annotation.*;
 import com.learn.springframework.controller.UserController;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
@@ -10,8 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.text.Style;
-import javax.transaction.InvalidTransactionException;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
