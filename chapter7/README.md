@@ -31,7 +31,7 @@
     (1)、在业务方法定义时声明参数列表。
     (2)、给参数列表添加@RequestParam注解。
     
-![RequestParam注解](chapter7/img-folder/requestParam.jpg)
+![RequestParam注解](https://github.com/lwx57280/Spring-MVC-learning/blob/master/chapter7/img-folder/requestParam.jpg)
 
 
 将URL请求的参数name和id分别赋给形参name和id,同时进行了数据类型转换，URL参数都是String类型的，根据形参
@@ -42,7 +42,7 @@ http://localhost:8089/helloHandler/paramsBind?name=zhangsan&id=10
 
 Spring MVC同时也支持RESTFUL分隔的URL
 
-![RESTFUL 风格的URL](chapter7/img-folder/RESTFUL.jpg)
+![RESTFUL 风格的URL](https://github.com/lwx57280/Spring-MVC-learning/blob/master/chapter7/img-folder/RESTFUL.jpg)
 
 将参数列表的注解改为@PathVariable("name")即可,非常简单
 
@@ -53,11 +53,11 @@ http://localhost:8089/helloHandler/rest/zhangsan
 
     Spring MVC通过映射可以直接在业务方法中获取Cookie的值
     
-![映射 Cookie](chapter7/img-folder/cookie.jpg)
+![映射 Cookie](https://github.com/lwx57280/Spring-MVC-learning/blob/master/chapter7/img-folder/cookie.jpg)
 
 Spring MVC解决中文乱码很简单,在web.xml中添加过滤器即可
 
-![encoding中文乱码过滤器](chapter7/img-folder/encoding.jpg)
+![encoding中文乱码过滤器](https://github.com/lwx57280/Spring-MVC-learning/blob/master/chapter7/img-folder/encoding.jpg)
 
 redirect重定向:
     地址栏发生改变,需要注意的是业务方法中，设置重定向不能写逻辑视图，必须写明目标资源的物理路径
