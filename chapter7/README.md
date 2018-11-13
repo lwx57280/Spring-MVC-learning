@@ -12,7 +12,7 @@
     
     2、method:指定请求的method类型，GET、POST、PUT、DELETE等。
     
-![method](chapter7/img-folder/method.jpg)
+![method](https://github.com/lwx57280/Spring-MVC-learning/blob/master/chapter7/img-folder/method.jpg)
 
  表示只有POST请求可以访问该方法，若使用GET请求方法，直接报错。 
     
